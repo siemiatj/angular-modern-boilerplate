@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Starter Kit</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../dist/js/app.js"></script>
+</head>
+<body>
+
+<div class="content" ng-controller="basicController as ctrl">
+  <basic-directive variable="{{ text }}"></basic-directive>
+</div>
+</body>
+</html>
