@@ -1,17 +1,24 @@
 'use strict';
 
 /* App Bundle */
+import angular from 'angular';
+import angularAnimate from 'angular-animate';
+import angularMaterial from 'angular-material';
 
-require('../../node_modules/angular-bootstrap/ui-bootstrap-tpls');
+require('angular-material/angular-material.css');
+require('angular-material/layouts/angular-material.layout-attributes.scss');
+require('font-awesome/css/font-awesome.css');
+
 require('./services');
 require('./controllers.es6');
 require('./directives.es6');
 
 angular.module('app', [
-    'ui.bootstrap',
-    'app.services',
-    'app.controllers',
-    'app.directives'
+  angularAnimate,
+  angularMaterial,
+  'app.services',
+  'app.controllers',
+  'app.directives'
   ]);
 
 angular.module('app.controllers', [
