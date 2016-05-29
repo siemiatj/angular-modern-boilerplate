@@ -1,7 +1,13 @@
 ## What & why ?
 Have you ever found yourself in need of a basic Angular boilerplate, with Webpack and Babel already set-up ? Ready to write and run Karma unit tests ? No BS stupid app, generators, bower ? Well, here you go.
 
-## What's included ?
+## Old vs New
+
+Depending on what you need, there are two versions of this project.
+
+### Old
+
+'Old' version includes:
 
 * Webpack
 * BabelJS
@@ -10,6 +16,21 @@ Have you ever found yourself in need of a basic Angular boilerplate, with Webpac
 * Karma
 * ESlint
 * JShint
+
+This version now lives in `master-old` [branch](https://github.com/siemiatj/angular-modern-boilerplate/tree/master-old)
+
+### New
+
+Another more `edge` version set up to use all the cool stuff (this is a work in progress. Check [issue 1](https://github.com/siemiatj/angular-modern-boilerplate/issues/1) to see how it's gonna look like eventually) :
+
+* ES6
+* Webpack
+* BabelJS
+* Angular-Material
+* Karma
+* ESlint
+* JShint
+
 
 ## Setup 
 You need node with npm and `grunt-cli` installed. Then run:
