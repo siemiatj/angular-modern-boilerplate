@@ -1,72 +1,28 @@
-const path              = require('path');
-const webpack           = require('webpack');
-const PATHS = {
-  app: path.join(__dirname, 'app'),
-  dist: path.resolve(__dirname, 'dist'),
-  assets: path.join(__dirname, 'app/assets')
-};
+'use strict';
 
-const config = {
-  entry: {
-    app: './app/js/app.bundle.es6'
-  },
+var webpack = require('webpack');
+var path = require('path');
+
+module.exports = {
   output: {
-    path: PATHS.dist,
-    publicPath: '/',
-    filename: 'bundle.js'
+    path: 'dist/',
+    filename: '[name].js'
   },
-  devServer: {
-    contentBase: './dist',
-    historyApiFallback: true
+  entry: {
+    'js/app': './app/js/app.bundle.js'
   },
   resolve: {
     modulesDirectories: ['node_modules']
   },
-  devtool: 'eval-source-map',
-  noInfo: true,
   cache: true,
+
   stats: {
     colors: true,
     reasons: true
   },
   module: {
     loaders: [
-      {
-        test: /\.es6?$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
-      },
-      {
-        test: /\.svg$/,
-        loader: 'file',
-        include: PATHS.assets
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css'
-      }, 
-      {
-        test: /\.html$/,
-        loader: 'ngtemplate?relativeTo=' + PATHS.app + '/!html'
-      },
-      {
-        test: [/fontawesome-webfont\.svg/, /fontawesome-webfont\.eot/, /fontawesome-webfont\.ttf/, /fontawesome-webfont\.woff/, /fontawesome-webfont\.woff2/],
-        loader: 'file?name=fonts/[name].[ext]',
-        include: /node_modules/
-      }
+      { test: /\.es6$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime' }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
-  ]
+  }
 };
-
-module.exports = config;
-
