@@ -1,5 +1,3 @@
-'use strict';
-
 /* Controllers */
 
 import { object } from 'underscore';
@@ -17,11 +15,15 @@ class BasicController {
     const { $scope, basicService } = this;
 
     basicService.doRequest()
-      .then((resp) => {
+      .then(() => {
         $scope.text = 'Hello World !';
       }, () => {
         $scope.text = 'Error !';
       });
+  }
+
+  click() {
+    console.log('CLICK !');
   }
 };
 
