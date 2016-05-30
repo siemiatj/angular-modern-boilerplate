@@ -1,10 +1,10 @@
 ## What & why ?
-Have you ever found yourself in need of a basic Angular boilerplate, with Webpack and Babel already set-up ? Ready to write and run Karma unit tests ? No BS stupid app, generators, bower ? Well, here you go.
+Have you ever found yourself in need of a basic Angular boilerplate, with Webpack already set-up ? Ready to write and run Karma unit tests ? No BS stupid app, generators, bower ? Well, here you go.
 
 ## What's included ?
 
+* Angular
 * Webpack
-* BabelJS
 * Bootstrap
 * Angular-Bootstrap
 * Karma
@@ -25,7 +25,7 @@ Then run:
 `grunt karma`
 
 ## ES6
-Webpack is configured to compile files live. To use ES6 sugar suffix your scripts with `es6`.
+This is an ES5 compatible branch. For more up-to-date solution checkout the master branch.
 
 ## What's next
 This is a dowhatyouwantwithit project. Feel free to submit PR's.

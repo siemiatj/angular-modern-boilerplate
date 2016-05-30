@@ -7,12 +7,7 @@
     "url": "https://github.com/siemiatj/angular-modern-boilerplate.git"
   },
   "devDependencies": {
-    "angular": "^1.4.8",
-    "angular-bootstrap": "^0.12.2",
     "angular-mocks": "^1.4.8",
-    "babel-core": "^5.1.11",
-    "babel-loader": "^5.0.0",
-    "bootstrap": "^3.3.6",
     "chai": "^3.4.1",
     "chai-as-promised": "^5.1.0",
     "grunt": "^0.4.5",
@@ -35,12 +30,14 @@
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "requirejs": "^2.1.22",
-    "underscore": "^1.8.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "babel-runtime": "^5.1.11",
+    "angular": "^1.4.8",
+    "angular-bootstrap": "^0.12.2",
+    "bootstrap": "^3.3.6",
+    "underscore": "^1.8.3",
     "debug": "^2.2.0"
   }
 }

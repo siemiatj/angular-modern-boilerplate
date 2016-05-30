@@ -4,15 +4,15 @@
 
 require('../../node_modules/angular-bootstrap/ui-bootstrap-tpls');
 require('./services');
-require('./controllers.es6');
-require('./directives.es6');
+require('./controllers');
+require('./directives');
 
 angular.module('app', [
-    'ui.bootstrap',
-    'app.services',
-    'app.controllers',
-    'app.directives'
-  ]);
+  'ui.bootstrap',
+  'app.services',
+  'app.controllers',
+  'app.directives'
+]);
 
 angular.module('app.controllers', [
   'app.controllers.basic-controller'

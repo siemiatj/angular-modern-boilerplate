@@ -15,14 +15,8 @@ module.exports = {
     modulesDirectories: ['node_modules']
   },
   cache: true,
-
   stats: {
     colors: true,
     reasons: true
-  },
-  module: {
-    loaders: [
-      { test: /\.es6$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime' }
-    ]
   }
 };

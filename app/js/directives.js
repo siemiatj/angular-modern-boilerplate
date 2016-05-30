@@ -2,19 +2,12 @@
 
 /* Directives */
 
-import { debounce } from 'underscore';
-
-const tpl = `
-<span>
-{{ variable }}
-</span>`;
-
 angular.module('app.directives.basic-directive', [])
   .directive('basicDirective', [
     function () {
       return {
         restrict: 'E',
-        template: tpl,
+        template: '<span>{{ variable }}</span>',
         scope: {
           variable: '@'
         },
