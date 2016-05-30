@@ -1,4 +1,9 @@
 {
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "plugins": [
+    "angular"
+  ],
   "ecmaFeatures": {
     "modules": true,
   },
@@ -11,7 +16,7 @@
     "require": false
   },
   "rules": {
-    "strict": [2, "global"],
+    "strict": [1, "global"],
     "quotes": [2, "single"],
     "semi": [2, "always"],
     "eqeqeq": [2, "smart"],
@@ -29,9 +34,10 @@
     "object-curly-spacing": [1, "always"],
     "no-extra-parens": [2, "functions"],
     "indent": [1, 2],
-    "linebreak-style": [1, "unix"],
+    "linebreak-style": [2, "unix"],
     "comma-dangle": [2, "never"],
     "no-unused-vars": [2, {"vars": "all", "varsIgnorePattern": "_"}],
-    "no-undef": [2]
+    "no-undef": [2],
+    "arrow-parens": [2, "as-needed"]
   }
 }
