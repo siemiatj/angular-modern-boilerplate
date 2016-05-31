@@ -1,4 +1,5 @@
 /* Controllers */
+/*eslint no-console: ["error", { allow: ["log"] }] */
 
 import { object } from 'underscore';
 
@@ -25,7 +26,7 @@ class BasicController {
   click() {
     console.log('CLICK !');
   }
-};
+}
 
 BasicController.$inject = [
   '$scope',

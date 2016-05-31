@@ -1,6 +1,7 @@
 /* Directives */
+/*eslint no-console: ["error", { allow: ["log"] }] */
 
-import { debounce } from 'underscore';
+import { reduce } from 'underscore';
 
 const tpl = `
 <span>
@@ -17,6 +18,11 @@ angular.module('app.directives.basic-directive', [])
           variable: '@'
         },
         link: function (scope) {
+          scope.foo = reduce([1, 2, 3], (memo, num) => { 
+            return memo + num; 
+          }, 0);
+
+          console.log('FOO: ', scope.foo);
         }
       };
     }
