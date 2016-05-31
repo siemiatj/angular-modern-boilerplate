@@ -22,7 +22,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.es6$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime' }
+      { test: /\.es6$/, exclude: /node_modules/, loaders: ['babel-loader?optional=runtime', 'eslint-loader' ]}
     ]
   }
 };
