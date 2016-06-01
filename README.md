@@ -9,8 +9,8 @@ Depending on what you need, there are two versions of this project.
 
 'Old' version includes:
 
+* ES5
 * Webpack
-* BabelJS
 * Bootstrap
 * Angular-Bootstrap
 * Karma
@@ -29,7 +29,6 @@ Another more `edge` version set up to use all the cool stuff (this is a work in 
 * Angular-Material
 * Karma
 * ESlint
-* JShint
 
 
 ## Setup 
