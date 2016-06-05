@@ -4,6 +4,8 @@ require('./services');
 require('./controllers.es6');
 require('./directives.es6');
 
+require('../scss/app.scss');
+
 angular.module('app', [
   'ngMaterial',
   'app.services',

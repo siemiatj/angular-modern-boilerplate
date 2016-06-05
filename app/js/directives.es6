@@ -4,7 +4,7 @@
 import { reduce } from 'underscore';
 
 const tpl = `
-<span>
+<span class="basic">
 {{ variable }}
 </span>`;
 
