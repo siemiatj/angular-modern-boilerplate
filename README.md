@@ -26,6 +26,7 @@ Another more `edge` version set up to use all the cool stuff (this is a work in 
 * ES6
 * Webpack
 * BabelJS
+* Sass
 * Angular-Material
 * Karma
 * ESlint
