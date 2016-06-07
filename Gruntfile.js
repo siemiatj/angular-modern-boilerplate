@@ -19,6 +19,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', 'build');
-  grunt.registerTask('lint', ['jshint', 'eslint']);
+  grunt.registerTask('lint', 'eslint');
   require('load-grunt-tasks')(grunt);
 };
