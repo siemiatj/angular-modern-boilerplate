@@ -25,7 +25,7 @@ module.exports = {
       { 
         test: /\.es6$/, 
         exclude: /node_modules/, 
-        loaders: ['babel-loader?optional=runtime', 'eslint-loader' ]
+        loaders: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.scss$/,
