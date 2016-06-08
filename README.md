@@ -48,5 +48,7 @@ Then run:
 ## ES6
 Webpack is configured to compile files live. To use ES6 sugar suffix your scripts with `es6`.
 
-## What's next
+## What next
 This is a dowhatyouwantwithit project. Feel free to submit PR's.
+
+Sample project built using this boilerplate : https://github.com/siemiatj/simple-angular-app

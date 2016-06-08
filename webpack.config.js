@@ -1,7 +1,6 @@
 'use strict';
 
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
   output: {
@@ -14,8 +13,8 @@ module.exports = {
   resolve: {
     modulesDirectories: ['node_modules']
   },
+  devtool: 'eval-source-map',
   cache: true,
-
   stats: {
     colors: true,
     reasons: true
