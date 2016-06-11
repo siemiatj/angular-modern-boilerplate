@@ -17,14 +17,15 @@ var config = {
 };
 
 gulp.task('clean', () =>
-  del([config.paths.js.dist, config.paths.test.dist])
+  //del([config.paths.js.dist, config.paths.test.dist])
+  del(config.paths.js.dist)
 );
 
-gulp.task('karma', () =>
-);
+// gulp.task('karma', () =>
+// );
 
 gulp.task('webpack', function() {
-  return gulp.src(config.paths.js.src)
+  return gulp.src('app/js/app.bundle.js')
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest(config.paths.js.dist));
 });
