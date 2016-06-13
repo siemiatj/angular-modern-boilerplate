@@ -1,35 +1,48 @@
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import webpack from 'webpack';
+import webpackConfig from './webpack.config.js';
 import del from 'del';
 import runSequence from 'run-sequence';
 
-var config = {
+let Server = require('karma').Server;
+
+// create a single instance of the compiler to allow caching
+let devCompiler = webpack(webpackConfig);
+let config = {
   paths: {
     js: {
       src: 'app/**/*.es6',
       dist: 'dist/'
-    },
-    test: {
-      src: 'app/**/*.spec.js',
-      dist: 'test/'
     }
   }
 };
 
+gulp.task('build-dev', ['webpack'], function() {
+  gulp.watch([config.paths.js.src], ['webpack']);
+});
+
 gulp.task('clean', () =>
-  //del([config.paths.js.dist, config.paths.test.dist])
   del(config.paths.js.dist)
 );
 
-// gulp.task('karma', () =>
-// );
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    autoWatch: true
+  }, done).start();
+});
 
-gulp.task('webpack', function() {
-  return gulp.src('app/js/app.bundle.js')
-    .pipe(webpack( require('./webpack.config.js') ))
-    .pipe(gulp.dest(config.paths.js.dist));
+gulp.task('webpack', function(callback) {
+  devCompiler.run(function(err, stats) {
+    if(err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString({
+      colors: true
+    }));
+    callback();
+  });
 });
 
 gulp.task('default', () =>
-  runSequence('clean', ['webpack']) //, 'server') // we're not using happy so don't run this
+  runSequence('clean', ['build-dev'])
 );
