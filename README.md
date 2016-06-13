@@ -9,6 +9,7 @@ Depending on what you need, there are two versions of this project.
 
 'Old' version includes:
 
+* Grunt
 * ES5
 * Webpack
 * Bootstrap
@@ -23,6 +24,7 @@ This version now lives in `master-old` [branch](https://github.com/siemiatj/angu
 
 Another more `edge` version set up to use all the cool stuff (this is a work in progress. Check [issue 1](https://github.com/siemiatj/angular-modern-boilerplate/issues/1) to see how it's gonna look like eventually) :
 
+* Gulp
 * ES6
 * Webpack
 * BabelJS
