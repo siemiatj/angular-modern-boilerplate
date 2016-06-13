@@ -4,8 +4,7 @@ import webpack from 'webpack';
 import webpackConfig from './webpack.config.js';
 import del from 'del';
 import runSequence from 'run-sequence';
-
-let Server = require('karma').Server;
+import { Server } from 'karma';
 
 // create a single instance of the compiler to allow caching
 let devCompiler = webpack(webpackConfig);
