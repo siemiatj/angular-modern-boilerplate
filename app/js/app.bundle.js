@@ -1,6 +1,6 @@
 /* App Bundle */
 require('../../node_modules/angular-material');
-require('./services');
+require('./services.es6');
 require('./controllers.es6');
 require('./directives.es6');
 

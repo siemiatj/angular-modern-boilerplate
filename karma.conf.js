@@ -8,7 +8,7 @@ module.exports = function karmaConfig (config) {
     colors: true,
     autoWatch: true,
 
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS2'],
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
     browserDisconnectTimeout: 20000,
@@ -29,16 +29,9 @@ module.exports = function karmaConfig (config) {
     frameworks: ['mocha', 'chai'],
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/angular/angular.min.js',
       'app/js/app.bundle.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'app/js/*.spec.js',
-      {
-        pattern: 'app/js/*.js',
-        watched: true,
-        served: true,
-        included: false
-      }
+      'app/js/*.spec.js'
     ],
 
     plugins: [
@@ -46,12 +39,12 @@ module.exports = function karmaConfig (config) {
       require('karma-chai'),
       require('karma-webpack'),
       'karma-html2js-preprocessor',
-      'karma-phantomjs-launcher'
+      'karma-phantomjs2-launcher'
     ],
 
     preprocessors: {
       'app/js/*.bundle.js': ['webpack'],
-      '**/*.html': ['html2js'],
+      '**/*.html': ['html2js']
     }
   });
 };
