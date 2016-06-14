@@ -7,7 +7,6 @@
     "url": "https://github.com/siemiatj/angular-modern-boilerplate.git"
   },
   "devDependencies": {
-    "requirejs": "2.1.22",
     "angular-mocks": "1.4.8",
     "babel-core": "6.4.5",
     "babel-eslint": "6.0.3",
