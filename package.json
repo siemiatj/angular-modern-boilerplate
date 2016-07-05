@@ -1,11 +1,17 @@
 {
   "name": "angular-modern-boilerplate",
-  "version": "0.0.1",
-  "private": false,
+  "description": "Up to date AngularJS boilerplate",
+  "author": "Jakub Siemiatkowski <kuba@saskla.cz>",
   "repository": {
     "type": "git",
     "url": "https://github.com/siemiatj/angular-modern-boilerplate.git"
   },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siemiatj/angular-modern-boilerplate/issues"
+  },
+  "version": "1.0.0",
+  "private": false,
   "devDependencies": {
     "angular-mocks": "1.4.8",
     "babel-core": "6.4.5",
