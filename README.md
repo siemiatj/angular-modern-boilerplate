@@ -1,3 +1,7 @@
+# Deprecation warning
+
+This repository is deprecated. It should still work but packages won't be updated by me anymore.
+
 ## What & why ?
 Have you ever found yourself in need of a basic Angular boilerplate, with Webpack and Babel already set-up ? Ready to write and run Karma unit tests ? No BS stupid app, generators, bower ? Well, here you go.
 
